@@ -1,6 +1,10 @@
 # Amerifab-Docker 
 
-## 1. Create file "dockerfile" with below contents
+
+- Make sure you have docker installed
+- https://docs.docker.com/engine/install/
+
+## 1. Create file "dockerfile" with below contents in project directory
 
 
         FROM python:3.10
@@ -14,7 +18,7 @@
         COPY  . .
 
 
-## 2. create file docker-compose.yml with below contents
+## 2. create file docker-compose.yml with below contents in project directory
 
         
         version: '3.8'
@@ -72,6 +76,9 @@
 
 ## 4. run db instance and open console using docker desktop to edit the pg_hba.conf file
 
+        path of the file - /var/lib/postgresql/data
+        you can open this folder using docker file navigator after you run the db container and using the 3 dots ---> view files.
+        
 - remove scram-sha-256 and add true on the last line
 
 ## 5. Run this on Terminal
